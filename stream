@@ -1,0 +1,271 @@
+    1  hostnamectl set-hostname stream
+    2  exit
+    3  ip a
+    4  dnf install nginx
+    5  dnf install gcc make pcre-devel zlib-devel libtool
+    6  cd /usr/local/src
+    7  wget http://nginx.org/download/nginx-1.23.1.tar.gz
+    8  curl http://nginx.org/download/nginx-1.23.1.tar.gz
+    9  curl -o nginx-1.23.1.tar.gz http://nginx.org/download/nginx-1.23.1.tar.gz
+   10  tar -xzvf nginx-1.23.1.tar.gz
+   11  cd nginx-1.23.1
+   12  git clone https://github.com/arut/nginx-rtmp-module.git
+   13  curl dnf install git -y
+   14  dnf install git
+   15  git clone https://github.com/arut/nginx-rtmp-module.git
+   16  ./configure --add-module=./nginx-rtmp-module
+   17  ./configure --add-module=./nginx-rtmp-module --with-openssl
+   18  ./configure --add-module --with-openssl=./nginx-rtmp-module
+   19  dnf install openssl-devel -y
+   20  ./configure --add-module=./nginx-rtmp-module --with-openssl=/usr/include/openssl
+   21  make
+   22  make install
+   23  ./configure --add-module=./nginx-rtmp-module
+   24  ./configure --add-module=./nginx-rtmp-module --with-openssl=/usr/include/openssl
+   25  make
+   26  openssl version
+   27  ./configure --add-module=./nginx-rtmp-module
+   28  make
+   29  ls /usr/local/nginx/sbin/nginx
+   30  find /usr/local/nginx -name nginx
+   31  make clean
+   32  ./configure --add-module=./nginx-rtmp-module --with-openssl=/usr/include/openssl
+   33  make
+   34  ./configure --prefix=/usr/local/nginx --add-module=./nginx-rtmp-module --with-openssl=/usr/include/openssl
+   35  make install
+   36  dnf install openssl-devel
+   37  curl -o https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   38  cirl --help
+   39  curl --help
+   40  curl -o https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   41  wget https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   42  curl -o openssl-1.1.1l.tar.gz https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   43  tar -xzvf openssl-1.1.1l.tar.gz
+   44  file openssl-1.1.1l.tar.gz
+   45  tar -xzvf openssl-1.1.1l.tar.gz
+   46  curl -O https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   47  tar -xzvf openssl-1.1.1l.tar.gz
+   48  curl -O https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+   49  tar -xzvf openssl-1.1.1l.tar.gz
+   50  head openssl-1.1.1l.tar.gz
+   51  curl -O https://www.openssl.org/source/old/1.1.1/openssl-1.1.1l.tar.gz
+   52  tar -xzvf openssl-1.1.1l.tar.gz
+   53  curl -LO https://www.openssl.org/source/old/1.1.1/openssl-1.1.1l.tar.gz
+   54  tar -xzvf openssl-1.1.1l.tar.gz
+   55  cd openssl-1.1.1l
+   56  ./config --prefix=/usr/local/openssl no-shared no-threads
+   57  yum install -y perl perl-core
+   58  ./config --prefix=/usr/local/openssl no-shared no-threads
+   59  make -j$(nproc)
+   60  make install
+   61  cd /usr/local/src/nginx-1.23.1
+   62  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-openssl=./openssl-1.1.1l
+   63  cd /usr/local/src/nginx-1.23.1/openssl-1.1.1l
+   64  ./config --prefix=/usr/local/openssl no-shared no-threads
+   65  make -j$(nproc)
+   66  make install
+   67  cd /usr/local/src/nginx-1.23.1
+   68  ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-openssl=./openssl-1.1.1l
+   69  make -j$(nproc)
+   70  make install
+   71  /usr/local/nginx/sbin/nginx -v
+   72  /usr/local/nginx/sbin/nginx
+   73  cat /usr/local/nginx/conf/nginx.conf
+   74  dnf install nfs-utils -y
+   75  mkdir -p /usr/local/nginx/html/videos
+   76  mount -t nfs 172.16.0.134:/home/media/videos /usr/local/nginx/html/videos
+   77  ls -ld /usr/local/nginx/html/videos
+   78  vi /etc/nginx/nginx.conf
+   79  nginx -t
+   80  vi /etc/nginx/nginx.conf
+   81  nginx -t
+   82  systemctl restart nginx
+   83  systemctl status nginx.service
+   84  vi /etc/nginx/nginx.conf
+   85  systemctl restart nginx
+   86  vi /etc/nginx/nginx.conf
+   87  systemctl restart nginx
+   88  firewall-cmd --zone=public --add-port=8080/tcp --permanent
+   89  firewall-cmd --reload
+   90  cd /usr/local/nginx/html/videos/
+   91  ls
+   92  vi /etc/nginx/nginx.conf
+   93  systemctl restart nginx
+   94  mount | grep /usr/local/nginx/html/videos
+   95  ls /usr/local/nginx/html/videos
+   96  showmount -e 172.16.0.134
+   97  mount -t nfs 172.16.0.134:/home/media/videos /usr/local/nginx/html/videos
+   98  vi /etc/nginx/nginx.conf
+   99   nginx -t
+  100  vi /etc/nginx/nginx.conf
+  101  nginx -t
+  102  systemctl restart nginx
+  103  ls /usr/local/nginx/html/videos
+  104  chown -R nginx:nginx /usr/local/nginx/html/videos
+  105  chmod -R 755 /usr/local/nginx/html/videos
+  106  mount | grep /usr/local/nginx/html/videos
+  107  ls -l /usr/local/nginx/html/videos
+  108  chmod -R 755 /usr/local/nginx/html/videos
+  109  chown -R nginx:nginx /usr/local/nginx/html/videos
+  110  vi nginx.conf
+  111  vi /etc/nginx/nginx.conf
+  112  history
+  113  systemctl restart nginx
+  114  vi /etc/nginx/nginx.conf
+  115  systemctl restart nginx
+  116  ls /usr/local/nginx/html/videos
+  117  mount | grep /usr/local/nginx/html/videos
+  118  nginx -t
+  119  vi /etc/nginx/nginx.conf
+  120  systemctl restart nginx
+  121  nginx -t
+  122  systemctl restart nginx
+  123  chmod -R 755 /usr/local/nginx/html/videos
+  124  setenforce 0
+  125  chmod -R 755 /usr/local/nginx/html/videos
+  126  mount | grep /usr/local/nginx/html/videos
+  127  mkdir -p /usr/local/nginx/html/videos
+  128  mount 172.16.0.134:/home/media/videos /usr/local/nginx/html/videos
+  129  mount | grep /usr/local/nginx/html/videos
+  130  chmod -R 755 /usr/local/nginx/html/videos
+  131  ls -ld /usr/local/nginx/html/videos
+  132  mount 172.16.0.134:/home/media/videos /usr/local/nginx/html/videos
+  133  ls -ld /usr/local/nginx/html/videos
+  134  mount 172.16.0.134:/home/media/videos /usr/local/nginx/html/videos
+  135  mount | grep /usr/local/nginx/html/videos
+  136  systemctl status nginx
+  137  reboot
+  138  sysctl -w net.ipv4.ip_forward=1
+  139  sysctl -p
+  140  ip route add 192.168.0.0/24 via 192.168.1.1
+  141  echo "192.168.0.0/24 via 192.168.1.1" | sudo tee -a /etc/sysconfig/network-scripts/route-ens224
+  142  exit
+  143  ping 192.168.0.102
+  144  ping md-process.mini.plix
+  145  ping md-process.mini.flix
+  146  exit
+  147  ping 192.168.0.102
+  148  exit
+  149  ping 192.168.0.102
+  150  exit
+  151  ping 192.168.0.102
+  152  cd
+  153  exit
+  154  ls
+  155  ip route
+  156  exit
+  157  cd /mnt
+  158  ls
+  159  showmount -e 192.168.0.102
+  160  ls
+  161  cd /nfs_share
+  162  cd ..
+  163  cd /mnt/nfs_share
+  164  cd ..
+  165  mount -t nfs 192.168.0.106:/share
+  166  mount -t nfs 192.168.0.106:/share /mnt/nfs
+  167  mount -t nfs 192.168.0.106:/share /mnt
+  168  mount -t nfs 192.168.0.102:/share /mnt
+  169  mount -t nfs 192.168.0.102:/nfs_share /mnt
+  170  ls /mnt
+  171  cd ~
+  172  sudo mkdir -p /mnt/nfs
+  173  ls
+  174  cd /mnt/nfs
+  175  ls
+  176  cd ~
+  177  sudo mkdir -p /mnt/nfs
+  178  sudo mount -t nfs 192.168.0.102:/nfs/videos /mnt/nfs
+  179  sudo mount -t nfs 192.168.0.102:/nfs_share /mnt/nfs
+  180  showmount -e 192.168.0.102
+  181  sudo mount -t nfs 192.168.0.102:/nfs_share /mnt/nfs
+  182  sudo mount -t nfs 192.168.0.102:/mnt/nfs_share /mnt/nfs
+  183  ls /mnt/nfs
+  184  cd /root
+  185  ls
+  186  sudo tail -f /var/log/nginx/access.log
+  187  grep access_log /etc/nginx/nginx.conf
+  188  sudo tail -f /var/log/nginx/access.log
+  189  exit
+  190  systemctl status nginx
+  191  showmount -e
+  192  vi /etc/nginx.conf
+  193  vi /etc/nginx/nginx.conf
+  194  exit
+  195  ll
+  196  firewall-cmd --list-all
+  197  ll
+  198  systemctl list-units --type=service | grep -i stream
+  199  netstat -tulpn | grep 8082
+  200  ps aux | grep stream
+  201  systemctl | grep -i stream
+  202  ls -la /var/log/
+  203  tail -f /var/log/messages
+  204  cat /var/log/messages
+  205  systemctl status nginx
+  206  cat /var/log/nginx/access.log
+  207  df -Th
+  208  ls /mnt/nfs
+  209  cd /etc/nginx/
+  210  ls
+  211  cat nginx.conf
+  212  df -Th
+  213  ls /mnt/nfs
+  214  systemctl status
+  215  firewallctl --list-all
+  216  firewall-cmd --list-all
+  217  curl http://localhost:8082
+  218  curl http://localhost:8083
+  219  systemctl status nginx
+  220  ningx -t
+  221  -t nignx
+  222  ls /var
+  223  ls /usr
+  224  history
+  225  vi /etc/nginx/nignx.conf
+  226  history
+  227  vi /etc/nginx/nginx.conf
+  228  systemctl restart nginx
+  229  ping 192.168.0.1
+  230  ping 192.168.0.102
+  231  ip a
+  232  firewall-cmd --list-all
+  233  lsof -i -P -n
+  234  yum install lsof
+  235  lsof -i -P -n
+  236  systemctl status nginx
+  237  ping 10.128.0.177
+  238  ping 192.168.0.102
+  239  ip a
+  240  ping 192.168.0.102
+  241  mkdir -p /mnt/backup
+  242  mount -t nfs 192.168.0.102:/mnt/nfs_share /mnt/backup
+  243  showmount -e 192.168.0.102
+  244  ls /mnt/backup
+  245  ip a
+  246  firewall-cmd --list-all
+  247  nginx -t
+  248  systemctl status nginx
+  249  setenforce 0
+  250  systemctl restart nginx
+  251  systemctl status nginx
+  252  history
+  253  showmount -e 192.168.0.102
+  254  curl http://192.168.1.105:8082/mnt/backup/sample-5s.mp4
+  255  chmod -R 755 /mnt/backup
+  256  curl http://192.168.1.105/backup/sample.mp4
+  257  ls -l /mnt/backup/sample.mp4
+  258  df -h | grep backup
+  259  ls /mnt/backup
+  260  ls -l /mnt/nfs_share/sample.mp4
+  261  showmount -e 192.168.0.102
+  262  dnf install httpd -y
+  263  systemctl enable --now httpd
+  264  systemctl status httpd
+  265  firewall-cmd --add-service=http --permanent
+  266  firewall-cmd --reload
+  267  curl http://192.168.1.105/backup/sample.mp4
+  268  ls /mnt/backup
+  269  mv stream1.ts /mnt/backup
+  270  mv /stream1.ts /mnt/backup/
+  271  ls 
